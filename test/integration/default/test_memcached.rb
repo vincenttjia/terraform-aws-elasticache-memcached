@@ -2,7 +2,7 @@ require 'awspec'
 require 'aws-sdk'
 require 'rhcl'
 
-config = Rhcl.parse(File.open('examples/test_fixture/main.tf'))
+config = Rhcl.parse(File.open('examples/test_memcached/main.tf'))
 
 cluster_id = config['module']['memcached']['cluster_id']
 engine_version = config['module']['memcached']['engine_version']
