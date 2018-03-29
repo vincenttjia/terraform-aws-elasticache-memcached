@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+gem 'net-ssh'
+gem 'awspec'
+gem 'kitchen-terraform'
+gem 'test-kitchen'
+gem 'kitchen-verifier-awspec'
+gem 'rhcl'

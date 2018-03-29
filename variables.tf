@@ -1,5 +1,5 @@
-variable "cluster_id" {
-  description = "cluster id for memcached"
+variable "service_name" {
+  description = "service name for memcached"
   type        = "string"
 }
 
@@ -28,18 +28,8 @@ variable "security_group_ids" {
   type        = "list"
 }
 
-variable "availability_zones" {
-  description = "list of availability zone in which memcached will created"
-  type        = "list"
-}
-
 variable "apply_immediately" {
   description = "specify config changes to applied during maintenance window or immediate"
-  type        = "string"
-}
-
-variable "az_mode" {
-  description = "provisioning mode, true will create cluster accross multiple az"
   type        = "string"
 }
 
@@ -56,4 +46,10 @@ variable "notification_topic_arn" {
   description = "ARN of SNS topic to send notifications of elasticache"
   type        = "string"
   default     = ""
+}
+
+variable "memcached_tags" {
+  description = "elasticache memcached tags"
+  type = "map"
+  default = {}
 }

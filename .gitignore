@@ -13,3 +13,6 @@
 *.iws
 .kitchen/
 .kitchen.local.yml
+
+# Gem
+Gemfile.lock
