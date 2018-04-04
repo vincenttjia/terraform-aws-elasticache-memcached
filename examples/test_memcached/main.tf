@@ -1,7 +1,3 @@
-locals {
-  service_name = "memtest"
-}
-
 data "aws_vpc" "develop" {
   filter {
     name   = "tag:Name"
@@ -17,23 +13,19 @@ data "aws_security_group" "default" {
 module "test_memcached" {
   source = "../../"
 
-  service_name    = "${local.service_name}"
-  engine_version  = "1.4.34"
-  node_type       = "cache.t2.micro"
-  num_cache_nodes = "1"
+  product_domain = "tsi"
+  service_name   = "tsiecis"
+  environment    = "staging"
+  description    = "Cache of ec2 inventory search data"
 
-  parameter_group_name = "default.memcached1.4"
+  engine_version       = "1.4.34"
+  node_type            = "cache.m4.large"
+  num_cache_nodes      = "2"
+  az_mode              = "cross-az"
   subnet_group_name    = "test"
+  parameter_group_name = "default.memcached1.4"
   maintenance_window   = "sun:15:00-sun:16:00"
+  apply_immediately    = "true"
 
   security_group_ids = ["${data.aws_security_group.default.id}"]
-
-  apply_immediately = "true"
-
-  memcached_tags = {
-    Name          = "memtest-mem"
-    Service       = "memtest"
-    ProductDomain = "test"
-    Environment   = "production"
-  }
 }

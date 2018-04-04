@@ -1,8 +1,10 @@
 output "cluster_id" {
+  description = "The cluster identifier of this memcached"
   value = "${aws_elasticache_cluster.memcached.cluster_id}"
 }
 
 output "az_mode" {
+  description = "The provisioning mode of this memcached"
   value = "${aws_elasticache_cluster.memcached.az_mode}"
 }
 
@@ -20,4 +22,12 @@ output "endpoint" {
 
 output "parameter_group_name" {
   value = "${aws_elasticache_cluster.memcached.parameter_group_name}"
+}
+
+output "port" {
+  value = "${aws_elasticache_cluster.memcached.port}"
+}
+
+output "subnet_group_name" {
+  value = "${aws_elasticache_cluster.memcached.subnet_group_name}"
 }

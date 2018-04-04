@@ -1,55 +1,78 @@
-variable "service_name" {
-  description = "service name for memcached"
+variable "product_domain" {
+  description = "Product domain abbreviation this memcached belongs to"
   type        = "string"
 }
 
-variable "maintenance_window" {
-  description = "preferred maintenance window for memcached"
+variable "environment" {
+  description = "Environment of this memcached resides in"
   type        = "string"
 }
 
-variable "node_type" {
-  description = "node type for memcached"
-  type        = "string"
-}
-
-variable "num_cache_nodes" {
-  description = "number of cache nodes for memcached"
-  type        = "string"
-}
-
-variable "parameter_group_name" {
-  description = "parameter group name for memcached"
-  type        = "string"
-}
-
-variable "security_group_ids" {
-  description = "security group ids attached to memcached"
-  type        = "list"
-}
-
-variable "apply_immediately" {
-  description = "specify config changes to applied during maintenance window or immediate"
-  type        = "string"
-}
-
-variable "engine_version" {
-  description = "version of memcached cluster engine"
-  type        = "string"
-}
-
-variable "subnet_group_name" {
-  description = "subnet group which the cluster belongs to"
-}
-
-variable "notification_topic_arn" {
-  description = "ARN of SNS topic to send notifications of elasticache"
+variable "description" {
+  description = "Description of what this memcached used for"
   type        = "string"
   default     = ""
 }
 
-variable "memcached_tags" {
-  description = "elasticache memcached tags"
-  type = "map"
-  default = {}
+variable "service_name" {
+  description = "Name of the service this memcached belongs to"
+  type        = "string"
+}
+
+variable "maintenance_window" {
+  description = "Preferred maintenance window for this memcached"
+  type        = "string"
+}
+
+variable "node_type" {
+  description = "Node type for this memcached"
+  type        = "string"
+}
+
+variable "num_cache_nodes" {
+  description = "Number of cache nodes for this memcached"
+  type        = "string"
+}
+
+variable "parameter_group_name" {
+  description = "Name of the parameter group used by this memcached cluster"
+  type        = "string"
+}
+
+variable "security_group_ids" {
+  description = "IDs of security groups to be attached to this memcached cluster"
+  type        = "list"
+}
+
+variable "apply_immediately" {
+  description = "Whether to apply cluster changes immediately, or during maintenance window"
+  type        = "string"
+}
+
+variable "engine_version" {
+  description = "Version of memcached engine for this cluster"
+  type        = "string"
+  default     = ""
+}
+
+variable "subnet_group_name" {
+  description = "Name of the subnet group this cluster resides in"
+  type        = "string"
+}
+
+variable "notification_topic_arn" {
+  description = "ARN of the SNS topic that should receive notification about this memcached cluster"
+  type        = "string"
+  default     = ""
+}
+
+variable "port" {
+  description = "Port used for this memcached"
+  type        = "string"
+  default     = "11211"
+}
+
+variable "az_mode" {
+  description = "Whether to provision in single-az or cross-az"
+  type = "string"
 }
