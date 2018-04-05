@@ -12,7 +12,7 @@ resource "random_id" "cluster_id" {
   byte_length = "${local.mem_max_byte_length}"
 }
 
-resource "aws_elasticache_cluster" "memcached" {
+resource "aws_elasticache_cluster" "this" {
   cluster_id           = "${random_id.cluster_id.hex}"
   engine               = "${local.engine}"
   engine_version       = "${var.engine_version}"
