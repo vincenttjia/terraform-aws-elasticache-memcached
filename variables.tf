@@ -74,5 +74,5 @@ variable "port" {
 
 variable "az_mode" {
   description = "Whether to provision in single-az or cross-az"
-  type = "string"
+  type        = "string"
 }
