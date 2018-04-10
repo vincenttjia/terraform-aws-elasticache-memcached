@@ -4,3 +4,15 @@
 
 # Module directory
 .terraform/
+
+### JetBrains template
+# User-specific stuff:
+.idea
+
+## File-based project format:
+*.iws
+.kitchen/
+.kitchen.local.yml
+
+# Gem
+Gemfile.lock
