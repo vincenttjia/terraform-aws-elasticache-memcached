@@ -6,7 +6,7 @@ data "aws_vpc" "develop" {
 }
 
 data "aws_security_group" "default" {
-  vpc_id = "${data.aws_vpc.develop.id}"
+  vpc_id = data.aws_vpc.develop.id
   name   = "default"
 }
 
@@ -27,9 +27,10 @@ module "test_memcached" {
   maintenance_window   = "sun:15:00-sun:16:00"
   apply_immediately    = "true"
 
-  security_group_ids = ["${data.aws_security_group.default.id}"]
+  security_group_ids = [data.aws_security_group.default.id]
 
   additional_tags = {
     testingtag = "test"
   }
 }
+
