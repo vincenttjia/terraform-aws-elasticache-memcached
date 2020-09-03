@@ -1,84 +1,85 @@
 variable "product_domain" {
   description = "Product domain abbreviation this memcached belongs to"
-  type        = "string"
+  type        = string
 }
 
 variable "environment" {
   description = "Environment of this memcached resides in"
-  type        = "string"
+  type        = string
 }
 
 variable "description" {
   description = "Description of what this memcached used for"
-  type        = "string"
+  type        = string
   default     = ""
 }
 
 variable "service_name" {
   description = "Name of the service this memcached belongs to"
-  type        = "string"
+  type        = string
 }
 
 variable "maintenance_window" {
   description = "Preferred maintenance window for this memcached"
-  type        = "string"
+  type        = string
 }
 
 variable "node_type" {
   description = "Node type for this memcached"
-  type        = "string"
+  type        = string
 }
 
 variable "num_cache_nodes" {
   description = "Number of cache nodes for this memcached"
-  type        = "string"
+  type        = string
 }
 
 variable "parameter_group_name" {
   description = "Name of the parameter group used by this memcached cluster"
-  type        = "string"
+  type        = string
 }
 
 variable "security_group_ids" {
   description = "IDs of security groups to be attached to this memcached cluster"
-  type        = "list"
+  type        = list(string)
 }
 
 variable "apply_immediately" {
   description = "Whether to apply cluster changes immediately, or during maintenance window"
-  type        = "string"
+  type        = string
 }
 
 variable "engine_version" {
   description = "Version of memcached engine for this cluster"
-  type        = "string"
+  type        = string
   default     = ""
 }
 
 variable "subnet_group_name" {
   description = "Name of the subnet group this cluster resides in"
-  type        = "string"
+  type        = string
 }
 
 variable "notification_topic_arn" {
   description = "ARN of the SNS topic that should receive notification about this memcached cluster"
-  type        = "string"
+  type        = string
   default     = ""
 }
 
 variable "port" {
   description = "Port used for this memcached"
-  type        = "string"
+  type        = string
   default     = "11211"
 }
 
 variable "az_mode" {
   description = "Whether to provision in single-az or cross-az"
-  type        = "string"
+  type        = string
 }
 
 variable "additional_tags" {
-  type        = "map"
+  type        = map(string)
   default     = {}
   description = "Common additional tags"
 }
+
