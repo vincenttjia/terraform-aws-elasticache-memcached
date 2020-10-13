@@ -3,7 +3,7 @@ locals {
   cluster_id_format   = "%s-%s-"
   mem_prefix          = format(local.cluster_id_format, var.service_name, "mem")
   mem_max_name_length = "20"
-  mem_max_byte_length = local.mem_max_name_length - length(local.mem_prefix) / 2
+  mem_max_byte_length = floor((local.mem_max_name_length - length(local.mem_prefix)) / 2)
   mem_byte_length     = min(local.mem_max_name_length, local.mem_max_byte_length)
 }
 
