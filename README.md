@@ -1,11 +1,11 @@
 # terraform-aws-elasticache-memcached
 
 [![Terraform Version](https://img.shields.io/badge/Terraform%20Version->=0.13.0,_<0.14.0-blue.svg)](https://releases.hashicorp.com/terraform/)
-[![Release](https://img.shields.io/github/v/release/traveloka/terraform-aws-elasticache-memcached.svg)](https://github.com/traveloka/terraform-aws-vpc/releases)
-[![Last Commit](https://img.shields.io/github/last-commit/traveloka/terraform-aws-elasticache-memcached.svg)](https://github.com/traveloka/terraform-aws-vpc/commits/master)
-[![Issues](https://img.shields.io/github/issues/traveloka/terraform-aws-elasticache-memcached.svg)](https://github.com/traveloka/terraform-aws-vpc/issues)
-[![Pull Requests](https://img.shields.io/github/issues-pr/traveloka/terraform-aws-elasticache-memcached.svg)](https://github.com/traveloka/terraform-aws-vpc/pulls)
-[![License](https://img.shields.io/github/license/traveloka/terraform-aws-elasticache-memcached.svg)](https://github.com/traveloka/terraform-aws-vpc/blob/master/LICENSE)
+[![Release](https://img.shields.io/github/v/release/traveloka/terraform-aws-elasticache-memcached.svg)](https://github.com/traveloka/terraform-aws-elasticache-memcached/releases)
+[![Last Commit](https://img.shields.io/github/last-commit/traveloka/terraform-aws-elasticache-memcached.svg)](https://github.com/traveloka/terraform-aws-elasticache-memcached/commits/master)
+[![Issues](https://img.shields.io/github/issues/traveloka/terraform-aws-elasticache-memcached.svg)](https://github.com/traveloka/terraform-aws-elasticache-memcached/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/traveloka/terraform-aws-elasticache-memcached.svg)](https://github.com/traveloka/terraform-aws-elasticache-memcached/pulls)
+[![License](https://img.shields.io/github/license/traveloka/terraform-aws-elasticache-memcached.svg)](https://github.com/traveloka/terraform-aws-elasticache-memcached/blob/master/LICENSE)
 ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)
 
 ## Description
